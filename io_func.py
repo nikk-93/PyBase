@@ -1,9 +1,9 @@
 def repeatOnError(*exceptions):
     def checking(function):
-        def checked(message_text):
+        def checked(*args, **kwargs):
             while True:
                 try:
-                    result = function(message_text)
+                    result = function(*args, **kwargs)
                 except exceptions as except_obj:
                     print(except_obj)
                     print("Повторите")
