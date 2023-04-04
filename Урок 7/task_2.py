@@ -19,13 +19,14 @@ length (длина в метрах), width (ширина в метрах).
 
 
 class Road():
+    weight_per_mm = 2500
+    depth_m = 20
+
     def __init__(self, length, width) -> None:
         self._length = length
         self._width = width
 
-    def calc_weight(self, weight_per_mcm, depth_m):
-        self.weight_per_mm = weight_per_mcm * 100
-        self.depth_m = depth_m
+    def calc_weight(self):
         self.weight = (self._length *
                        self._width *
                        self.weight_per_mm *
@@ -38,4 +39,4 @@ class Road():
 # одинаковым единицам измерения.
 
 road = Road(5000, 20)
-print(road.calc_weight(25, 0.05))
+print(road.calc_weight())

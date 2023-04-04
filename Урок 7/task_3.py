@@ -24,10 +24,11 @@ str(self) - вызывается функциями str, print и format.
 
 
 class Worker():
-    name = ''
-    surname = ''
-    position = ''
-    _income = {"wage": 0, "bonus": 0}
+    def __init__(self) -> None:
+        self.name = ''
+        self.surname = ''
+        self.position = ''
+        self._income = {"wage": 0, "bonus": 0}
 
 
 class Position(Worker):
