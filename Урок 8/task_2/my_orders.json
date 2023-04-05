@@ -1,0 +1,11 @@
+{
+    "orders": [
+        {
+            "item": "PC",
+            "quantity": 123,
+            "price": 432,
+            "buyer": "I",
+            "date": "05.04.2023"
+        }
+    ]
+}
